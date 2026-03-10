@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  ArrowLeft, Box, Grid3x3, Eye, EyeOff, RotateCcw, 
+  ArrowLeft, Grid3x3, Eye, EyeOff, RotateCcw, 
   ChevronDown, FileText, Clock, Cpu 
 } from 'lucide-react';
 import ModelViewer from './ModelViewer';
@@ -39,7 +39,7 @@ function Dashboard({ file, onBack }) {
           </button>
           <div className="header-divider"></div>
           <div className="header-logo">
-            <Box size={18} strokeWidth={2.5} />
+            <img src="/logo.png" alt="Printopia" className="header-logo-img" />
             <span>Printopia</span>
           </div>
         </div>
