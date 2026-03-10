@@ -273,4 +273,50 @@
   .viewer-info-badge {
     display: none;
   }
+  .viewer-toolbar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .toolbar-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+  .dashboard-split {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 10px;
+  }
+  .dashboard-header {
+    padding: 8px 12px;
+  }
+  .header-back-btn {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+  .header-back-btn span {
+    display: none;
+  }
+  .header-divider {
+    display: none;
+  }
+  .header-logo span {
+    display: none;
+  }
+  .dashboard-viewer-panel {
+    height: 300px;
+  }
+  .viewer-toolbar {
+    padding: 8px 10px;
+  }
+  .toolbar-btn span {
+    display: none;
+  }
+  .dashboard-split {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
 }

@@ -343,16 +343,53 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .auth-container {
+    max-width: 100%;
+    padding: 32px 16px;
+  }
+  .auth-card {
+    border-radius: var(--radius-xl);
+  }
+  .auth-logo {
+    margin-bottom: 24px;
+  }
+}
+
 @media (max-width: 480px) {
   .auth-container {
-    padding: 24px 16px;
+    padding: 24px 12px;
   }
-
   .auth-form {
-    padding: 20px 20px 24px;
+    padding: 20px 18px 24px;
+    gap: 14px;
   }
-
+  .auth-form-header h2 {
+    font-size: 1.1rem;
+  }
+  .auth-form-header p {
+    font-size: 0.78rem;
+  }
   .auth-logo-text {
     font-size: 1.2rem;
+  }
+  .auth-logo-img {
+    width: 34px;
+    height: 34px;
+  }
+  .auth-back-link {
+    margin-bottom: 20px;
+  }
+  .auth-submit-btn {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+  .auth-tab {
+    font-size: 0.8rem;
+    padding: 14px 0;
+  }
+  .auth-input-wrapper input {
+    font-size: 0.8rem;
+    padding: 10px 0;
   }
 }

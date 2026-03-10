@@ -149,3 +149,50 @@
   80% { width: 85%; }
   100% { width: 100%; }
 }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .loading-content {
+    padding: 0 24px;
+  }
+  .loading-title {
+    font-size: 1.35rem;
+  }
+  .loading-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 28px;
+  }
+  .loading-cube {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 28px;
+  }
+  .cube-face {
+    width: 48px;
+    height: 48px;
+  }
+  .cube-front  { transform: rotateY(0deg) translateZ(24px); }
+  .cube-back   { transform: rotateY(180deg) translateZ(24px); }
+  .cube-right  { transform: rotateY(90deg) translateZ(24px); }
+  .cube-left   { transform: rotateY(-90deg) translateZ(24px); }
+  .cube-top    { transform: rotateX(90deg) translateZ(24px); }
+  .cube-bottom { transform: rotateX(-90deg) translateZ(24px); }
+  .loading-steps {
+    margin-bottom: 28px;
+  }
+  .loading-step {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .loading-content {
+    padding: 0 16px;
+  }
+  .loading-title {
+    font-size: 1.15rem;
+  }
+  .loading-bar-container {
+    max-width: 240px;
+  }
+}

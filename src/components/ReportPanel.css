@@ -322,3 +322,65 @@
   color: #065f46;
   line-height: 1.5;
 }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .summary-scores {
+    gap: 24px;
+  }
+  .summary-counts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .report-header {
+    padding: 16px 16px 12px;
+  }
+  .report-summary {
+    padding: 16px;
+  }
+  .report-model-info {
+    padding: 12px 16px;
+  }
+  .report-issues {
+    padding: 12px 16px 20px;
+  }
+  .model-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .issue-card-header {
+    padding: 10px 12px;
+  }
+  .issue-card-body-inner {
+    padding: 0 12px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-scores {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .score-ring {
+    width: 64px;
+    height: 64px;
+  }
+  .score-number {
+    font-size: 1rem;
+  }
+  .summary-counts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .report-title {
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+  .issue-type {
+    font-size: 0.78rem;
+  }
+  .issue-severity-badge {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+}

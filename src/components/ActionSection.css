@@ -174,9 +174,40 @@
 @media (max-width: 640px) {
   .action-section-inner {
     padding: 20px;
+    gap: 20px;
+  }
+  .action-title {
+    font-size: 1rem;
+  }
+  .action-description {
+    font-size: 0.8rem;
+  }
+  .action-btn {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .action-btn-label {
+    font-size: 0.82rem;
+  }
+  .action-btn-sub {
+    font-size: 0.7rem;
   }
   .action-stats-bar {
     flex-wrap: wrap;
     gap: 8px;
+    padding: 10px 16px;
+  }
+  .action-stat {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .action-section-inner {
+    padding: 16px;
+  }
+  .action-icon-wrapper {
+    width: 40px;
+    height: 40px;
   }
 }
