@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
-import { Upload, Shield, Zap, ChevronRight, FileBox, Layers, AlertTriangle } from 'lucide-react';
+import { Upload, Box, Shield, Zap, ChevronRight, FileBox, Layers, AlertTriangle } from 'lucide-react';
 import './LandingPage.css';
 
 const SUPPORTED_FORMATS = ['.STL', '.OBJ', '.3MF'];
@@ -44,7 +44,7 @@ function LandingPage({ onFileUpload }) {
         <div className="landing-nav-inner">
           <div className="landing-logo">
             <div className="landing-logo-icon">
-              <img src="/logo.png" alt="Printopia" className="landing-logo-img" />
+              <Box size={22} strokeWidth={2.5} />
             </div>
             <span className="landing-logo-text">Printopia</span>
           </div>
