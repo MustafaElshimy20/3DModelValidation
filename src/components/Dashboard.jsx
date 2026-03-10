@@ -40,7 +40,7 @@ function Dashboard({ file, onBack }) {
           <div className="header-divider"></div>
           <div className="header-logo">
             <Box size={18} strokeWidth={2.5} />
-            <span>PrintGuard</span>
+            <span>Printopia</span>
           </div>
         </div>
         

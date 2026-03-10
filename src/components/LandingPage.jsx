@@ -46,7 +46,7 @@ function LandingPage({ onFileUpload }) {
             <div className="landing-logo-icon">
               <Box size={22} strokeWidth={2.5} />
             </div>
-            <span className="landing-logo-text">PrintGuard</span>
+            <span className="landing-logo-text">Printopia</span>
           </div>
           <div className="landing-nav-links">
             <a href="#features" className="nav-link">Features</a>
@@ -162,7 +162,7 @@ function LandingPage({ onFileUpload }) {
 
       {/* Footer */}
       <footer className="landing-footer">
-        <span>© 2026 PrintGuard — 3D Model Validation Platform</span>
+        <span>© 2026 Printopia — 3D Model Validation Platform</span>
       </footer>
     </div>
   );
