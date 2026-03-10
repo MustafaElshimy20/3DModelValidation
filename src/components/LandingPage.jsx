@@ -1,13 +1,15 @@
 import { useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
-import { Upload, Box, Shield, Zap, ChevronRight, FileBox, Layers, AlertTriangle } from 'lucide-react';
+import { Upload, Zap, ChevronRight, FileBox, Layers, AlertTriangle } from 'lucide-react';
 import './LandingPage.css';
 
 const SUPPORTED_FORMATS = ['.STL', '.OBJ', '.3MF'];
 
 function LandingPage({ onFileUpload }) {
   const [isDragging, setIsDragging] = useState(false);
+  const navigate = useNavigate();
 
   const onDrop = useCallback((acceptedFiles) => {
     if (acceptedFiles.length > 0) {
@@ -43,16 +45,12 @@ function LandingPage({ onFileUpload }) {
       <nav className="landing-nav">
         <div className="landing-nav-inner">
           <div className="landing-logo">
-            <div className="landing-logo-icon">
-              <Box size={22} strokeWidth={2.5} />
-            </div>
+            <img src="/logo.jpg" alt="Printopia" className="landing-logo-img" />
             <span className="landing-logo-text">Printopia</span>
           </div>
           <div className="landing-nav-links">
             <a href="#features" className="nav-link">Features</a>
-            <a href="#" className="nav-link">Docs</a>
-            <a href="#" className="nav-link">Pricing</a>
-            <button className="nav-btn">Sign In</button>
+            <button className="nav-btn" onClick={() => navigate('/auth')}>Sign In</button>
           </div>
         </div>
       </nav>
@@ -65,19 +63,12 @@ function LandingPage({ onFileUpload }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <div className="hero-badge">
-            <Shield size={14} />
-            <span>Enterprise-Grade Validation</span>
-          </div>
-          
           <h1 className="hero-title">
-            Validate Your 3D Models<br />
-            <span className="hero-title-accent">Before You Print</span>
+            Validate Your 3D Models <span className="hero-title-accent">Before You Print</span>
           </h1>
           
           <p className="hero-description">
-            Instant mesh analysis, printability checks, and automated repair suggestions.
-            Catch critical issues before they become costly print failures.
+            <span className="hero-keyword">Instant mesh analysis</span>, <span className="hero-keyword">printability checks</span>, and <span className="hero-keyword">automated repair</span> suggestions. Catch <span className="hero-highlight">critical issues</span> before they become costly print failures.
           </p>
 
           {/* Upload Area */}

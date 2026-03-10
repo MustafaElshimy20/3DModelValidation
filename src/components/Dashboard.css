@@ -67,6 +67,13 @@
   font-size: 0.95rem;
 }
 
+.header-logo-img {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+}
+
 .dashboard-header-center {
   display: flex;
   align-items: center;

@@ -1,7 +1,9 @@
 import { useState, useCallback } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import LandingPage from './components/LandingPage';
 import Dashboard from './components/Dashboard';
+import AuthPage from './components/AuthPage';
 import './App.css';
 
 function App() {
@@ -53,20 +55,27 @@ function App() {
         }}
       />
       
-      {currentView === 'landing' && (
-        <LandingPage onFileUpload={handleFileUpload} />
-      )}
-      
-      {currentView === 'loading' && (
-        <LoadingScreen fileName={uploadedFile?.name} />
-      )}
-      
-      {currentView === 'dashboard' && (
-        <Dashboard 
-          file={uploadedFile} 
-          onBack={handleBackToHome} 
-        />
-      )}
+      <Routes>
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="*" element={
+          <>
+            {currentView === 'landing' && (
+              <LandingPage onFileUpload={handleFileUpload} />
+            )}
+            
+            {currentView === 'loading' && (
+              <LoadingScreen fileName={uploadedFile?.name} />
+            )}
+            
+            {currentView === 'dashboard' && (
+              <Dashboard 
+                file={uploadedFile} 
+                onBack={handleBackToHome} 
+              />
+            )}
+          </>
+        } />
+      </Routes>
     </div>
   );
 }
