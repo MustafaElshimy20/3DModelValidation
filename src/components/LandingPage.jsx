@@ -68,7 +68,9 @@ function LandingPage({ onFileUpload }) {
           </h1>
           
           <p className="hero-description">
-            <span className="hero-keyword">Instant mesh analysis</span>, <span className="hero-keyword">printability checks</span>, and <span className="hero-keyword">automated repair</span> suggestions. Catch <span className="hero-highlight">critical issues</span> before they become costly print failures.
+            <span className="hero-keyword">Instant mesh analysis</span>, <span className="hero-keyword">printability checks</span>, and <span className="hero-keyword">automated repair</span> suggestions
+            <br />
+            Catch <span className="hero-keyword">critical issues</span> before they become costly print failures
           </p>
 
           {/* Upload Area */}
