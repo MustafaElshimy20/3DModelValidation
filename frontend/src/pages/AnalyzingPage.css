@@ -1,0 +1,108 @@
+.analyzing-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, #1d4ed8 0%, #0b1222 45%, #04070f 100%);
+}
+
+.analyzing-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
+}
+
+.analyzing-card {
+  position: relative;
+  z-index: 2;
+  width: min(560px, 92vw);
+  background: rgba(7, 13, 26, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 24px;
+  padding: 32px 30px;
+  box-shadow: 0 28px 70px rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.analyzing-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #bfdbfe;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.45), rgba(14, 116, 144, 0.45));
+  border: 1px solid rgba(191, 219, 254, 0.35);
+  margin: 0 auto 20px;
+}
+
+.analyzing-title {
+  text-align: center;
+  font-size: 1.85rem;
+  line-height: 1.1;
+  color: #f8fafc;
+  margin-bottom: 6px;
+}
+
+.analyzing-file {
+  text-align: center;
+  color: #93c5fd;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.analyzing-stage {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  margin-bottom: 18px;
+}
+
+.analyzing-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.analyzing-progress-track {
+  flex: 1;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.24);
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  overflow: hidden;
+}
+
+.analyzing-progress-bar {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #22d3ee, #3b82f6 55%, #818cf8);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.8);
+}
+
+.analyzing-progress-label {
+  min-width: 48px;
+  text-align: right;
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+.analyzing-steps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.analyzing-steps .step-active {
+  color: #67e8f9;
+}

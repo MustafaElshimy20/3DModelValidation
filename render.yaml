@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: printopia-backend
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /health

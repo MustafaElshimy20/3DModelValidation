@@ -1,0 +1,80 @@
+/* ===== Model Viewer ===== */
+.model-viewer {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+}
+
+.model-viewer-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.model-viewer-fullscreen {
+  border-radius: 0;
+}
+
+.viewer-overlay-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.viewer-fullscreen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  background: rgba(255, 255, 255, 0.92);
+  color: #334155;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.viewer-fullscreen-btn:hover {
+  background: #ffffff;
+}
+
+.viewer-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #334155;
+  font-size: 0.875rem;
+  backdrop-filter: blur(2px);
+}
+
+.viewer-overlay-loading {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.viewer-overlay-error {
+  background: rgba(39, 5, 5, 0.58);
+  color: #fecaca;
+}
+
+.viewer-loader-icon {
+  animation: spin 1s linear infinite;
+  color: #2563eb;
+}
+
+.viewer-overlay-actions,
+.viewer-overlay {
+  pointer-events: none;
+}
+
+.viewer-fullscreen-btn {
+  pointer-events: auto;
+}
